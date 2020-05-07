@@ -1,6 +1,6 @@
-# Honest Marketer for Google Chrome
+# Is this book good? for Google Chrome
 
-Tired of shady marketing tactics? now you can spot them in `< 1 second` with the free Honest Marketer extension.
+Tired of regretting bad book purchases? now you can spot them in `< 1 second` with the free Is this book good extension.
 
 _Soon it will be published in the Chrome Web Store_, but until then you can install it yourself without any coding experience.
 
@@ -15,14 +15,11 @@ _Soon it will be published in the Chrome Web Store_, but until then you can inst
 7. Click to 'select' the entire root folder, not any specific files
 8. You're all set! As you navigate the web, we'll point out shady marketing
 
-v1.0 was released August 28, 2019, and we have several feature ideas in the pipeline. To contribute more, send us a Tweet (reply or DM) at [@dishonestmktg](https://twitter.com/dishonestmktg) or email truth@honestmarketer.com.
+v1.0 was released August 28, 2019, and we have several feature ideas in the pipeline. To contribute more, send us a Tweet (reply or DM) at [@perfectingproduct](https://twitter.com/perfectingproduct) or email hello@perfectingproduct.com.
 
 **Coming soon**
 
-* ability to 'report' untracked shady behaviors
-* loserboards for the worst offenders, e.g. OptinMonster
-* ability to disable on specific URLs
-* etcetera
+* 
 
 ### Development
 
