@@ -10,7 +10,7 @@ let style = `<style>
   color: #000;
 }
 
-.hm-highlight-positive {
+.hm-highlight-onestar {
   background: lightgreen !important;
 }
 
