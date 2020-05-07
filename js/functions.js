@@ -138,36 +138,36 @@ function buildBasicReports() {
 }
 
 // let 3rd party tools load before checking
-function buildToolReports() {
-  setTimeout(function(){
-    if (hasCountdownTimer()) { // extend to other tool checks
-      var countdown = buildNotification('extra_warning');
-      countdown.style.bottom = calculateOffsetHeight() + 'px';
-
-      var content = countdown.getElementsByClassName('honest_marketer_report_content')[0]
-      content.innerHTML = '<strong>Warning</strong> - countdown timer detected'
-
-      countdown.append(content);
-      document.body.append(countdown);
-    }
-
-    if (hasExitIntentPopups()) {
-      var exitPopup = buildNotification('extra_warning');
-      exitPopup.style.bottom = calculateOffsetHeight() + 'px';
-
-      var content = exitPopup.getElementsByClassName('honest_marketer_report_content')[0]
-      content.innerHTML = '<strong>Warning</strong> - exit intent popup detected'
-
-      exitPopup.append(content);
-      document.body.append(exitPopup);
-    }
-
-    // skip 'bulk close' option if only regular report is present
-    if (hasCountdownTimer() || hasExitIntentPopups()) {
-      showCloseAll();
-    }
-  }, toolCheckDelay);
-}
+// function buildToolReports() {
+//   setTimeout(function(){
+//     if (hasCountdownTimer()) { // extend to other tool checks
+//       var countdown = buildNotification('extra_warning');
+//       countdown.style.bottom = calculateOffsetHeight() + 'px';
+//
+//       var content = countdown.getElementsByClassName('honest_marketer_report_content')[0]
+//       content.innerHTML = '<strong>Warning</strong> - countdown timer detected'
+//
+//       countdown.append(content);
+//       document.body.append(countdown);
+//     }
+//
+//     if (hasExitIntentPopups()) {
+//       var exitPopup = buildNotification('extra_warning');
+//       exitPopup.style.bottom = calculateOffsetHeight() + 'px';
+//
+//       var content = exitPopup.getElementsByClassName('honest_marketer_report_content')[0]
+//       content.innerHTML = '<strong>Warning</strong> - exit intent popup detected'
+//
+//       exitPopup.append(content);
+//       document.body.append(exitPopup);
+//     }
+//
+//     // skip 'bulk close' option if only regular report is present
+//     if (hasCountdownTimer() || hasExitIntentPopups()) {
+//       showCloseAll();
+//     }
+//   }, toolCheckDelay);
+// }
 
 function showCloseAll() {
   var closeAll = buildNotification('close_warnings');

@@ -49,7 +49,7 @@ let style = `<style>
 .honest_marketer_warnings span {
   font-style: bold;
 }
-
+// white background behind warning text
 .extra_warning {
   height: 25px;
   line-height: 1.5;
