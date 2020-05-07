@@ -113,7 +113,7 @@ function buildIcon() {
 }
 
 function statsContent() {
-  var innerHTML = '<span style="color: tomato">Hyperbole</span>: ' + negativeHighlights + ' instances<br>'
+  var innerHTML = '<span style="color: tomato">Hyperbole</span>: ' + ratingsHighlights + ' instances<br>'
   innerHTML += '<span style="color: darkgrey">Neutral</span>: ' + neutralHighlights + ' words<br>'
   innerHTML += '<span style="color: green">Honesty</span>: ' + positiveHighlights + ' examples'
 

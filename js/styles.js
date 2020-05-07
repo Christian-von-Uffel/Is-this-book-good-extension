@@ -1,6 +1,6 @@
 (function(){
 let style = `<style>
-.hm-highlight-negative {
+.hm-highlight-ratings {
   background: tomato !important;
   color: #fff;
 }
