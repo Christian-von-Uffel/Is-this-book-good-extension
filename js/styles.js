@@ -1,6 +1,6 @@
 (function(){
 let style = `<style>
-.hm-highlight-ratings {
+.hm-highlight-score {
   background: tomato !important;
   color: #fff;
 }
