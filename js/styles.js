@@ -5,7 +5,7 @@ let style = `<style>
   color: #fff;
 }
 
-.hm-highlight-neutral {
+.hm-highlight-date {
   background: lightyellow !important;
   color: #000;
 }
