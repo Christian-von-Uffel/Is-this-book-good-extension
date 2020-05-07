@@ -17,7 +17,7 @@ let style = `<style>
 .honest_marketer_warnings {
   width: 320px;
   border: 0;
-  bottom: 20px;
+  top: 20px;
   right: 20px;
   position: fixed;
   text-align: left;
