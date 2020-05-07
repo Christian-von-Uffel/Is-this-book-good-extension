@@ -115,7 +115,7 @@ function buildIcon() {
 function statsContent() {
   var innerHTML = '<span style="color: tomato">Rating Instances</span>: ' + scoreHighlights + ' instances<br>'
   innerHTML += '<span style="color: darkgrey">Date Instances</span>: ' + dateHighlights + ' words<br>'
-  innerHTML += '<span style="color: green">Honesty</span>: ' + positiveHighlights + ' examples'
+  innerHTML += '<span style="color: green">% of 1 Star Reviews</span>: ' + onestarHighlights + ' examples'
 
   return innerHTML;
 }
