@@ -12,3 +12,7 @@ this will let you test the css styling in a way that still enables you to easily
 afterwards you can easily rename the filename from .css to .js and then append the initial javascript function initialization
 
 from there you're golden
+
+## What browserAction does
+
+It hard to know what browserAction does ATM. It's obvious that when paired with "".onclick" that it can be used to detect clicks that can perform other actions like opening up a website in a new tab
