@@ -4,12 +4,12 @@
   "short_name": "Honest Marketer",
   "description": "Detect shady marketing practices on any website.",
   "browser_action": {
-     "default_icon": "images/hm-128.png"
+     "default_icon": "images/Icon128.png"
    },
   "version": "0.0.1",
-  "icons": { "16": "images/hm-16.png",
-           "48": "images/hm-48.png",
-          "128": "images/hm-128.png" },
+  "icons": { "16": "images/Icon16.png",
+           "48": "images/Icon48.png",
+          "128": "images/Icon128.png" },
   "permissions": [
     "activeTab",
     "tabs"

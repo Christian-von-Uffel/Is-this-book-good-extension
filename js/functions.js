@@ -107,7 +107,7 @@ function calculateOffsetHeight() {
 function buildIcon() {
   var honestMarketerIcon = document.createElement('img')
   honestMarketerIcon.classList.add('honest_marketer_icon')
-  honestMarketerIcon.src = chrome.extension.getURL('images/hm-128.png');
+  honestMarketerIcon.src = chrome.extension.getURL('images/Icon128.png');
 
   return honestMarketerIcon;
 }
