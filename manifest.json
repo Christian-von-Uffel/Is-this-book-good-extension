@@ -20,9 +20,10 @@
   },
   "content_scripts": [
     {
-      "matches": ["*://*/*"],
-      "exclude_matches": ["*://medium.com/*", "*://trello.com/b/*", "*://hangouts.google.com/*", "*://mail.google.com/*", "*://instagram.com/*", "*://facebook.com/*", "*://twitter.com/*", "*://stackoverflow.com/*"],
-      "js":["js/variables.js", "js/styles.js", "js/functions.js", "js/actions.js"]
+      "matches": ["*://*.amazon.com/*"],
+      "exclude_matches": [
+        
+      ]
     }
   ],
   "web_accessible_resources": [
