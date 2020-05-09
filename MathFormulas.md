@@ -54,7 +54,25 @@ document.querySelector("#acrCustomerReviewText").innerText
 
 19 ratings
 
+gets the actual number of reviews (still a text string though)
+
+document.querySelector("#acrCustomerReviewText").innerText.replace(' ratings','')
+
 need to replace text, convert to number, save to variable
+
+document.querySelector("#acrCustomerReviewText").innerText.replace(' ratings','')
+
+"971"
+
+let reviewCount = parseInt(document.querySelector("#acrCustomerReviewText").innerText.replace(' ratings',''))
+
+971
+
+getting the book's average review score
+
+let avgReviewScore = parseInt(document.querySelector("#a-popover-content-9 > div > div > div > div.a-icon-row.a-spacing-small.a-padding-none > span").innerText.replace(" out of 5",""))
+
+4.6
 
 ## Days Since Release Formulas
 
@@ -111,4 +129,4 @@ result:
 
 replace text strings not including 1-star % and save as value
 
-let m = document.querySelector("#histogramTable > tbody > tr:nth-child(5) > td.aok-nowrap > span.a-size-base > a").title.replace('1 stars represent ','').replace('% of rating','')
+let oneStarPercentage = document.querySelector("#histogramTable > tbody > tr:nth-child(5) > td.aok-nowrap > span.a-size-base > a").title.replace('1 stars represent ','').replace('% of rating','')
