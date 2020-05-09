@@ -113,9 +113,9 @@ function buildIcon() {
 }
 
 function statsContent() {
-  var innerHTML = '<span style="color: tomato">Rating Instances</span>: ' + scoreHighlights + ' instances<br>'
-  innerHTML += '<span style="color: darkgrey">Date Instances</span>: ' + dateHighlights + ' words<br>'
-  innerHTML += '<span style="color: green">% of 1 Star Reviews</span>: ' + onestarHighlights + ' examples'
+  var innerHTML = '<span style="color: green">High Buyer Success Rate?</span>: ' + scoreHighlights + ' %<br>'
+  innerHTML += '<span style="color: darkgrey">Recent Release Date?</span>: ' + dateHighlights + ' days ago<br>'
+  innerHTML += '<span style="color: tomato">Low % of 1 Star Reviews?</span>: ' + onestarHighlights + ' %'
 
   return innerHTML;
 }
