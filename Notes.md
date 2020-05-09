@@ -24,3 +24,9 @@ Use content scripts that match to a specific website or url
 The import thing though is that you need to use asterisks outside of the URL strings in the matching criteria to allow your extension to run on webpages that aren't exactly the single URL you've specified.
 
 For instance, if you want to run a plugin that shows some specific information on google search results, you'll need that information to keep showing no matter how the user's URL will change depending on what they're searching for.
+
+## How to use multiple javascript actions
+
+You can chain javascript actions together using the "." connector.
+
+Unlike other coding languages that require you to write separate formulas for each action you want to perform, in Javascript you can simply chain actions together in simple succession.
