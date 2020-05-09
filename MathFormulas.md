@@ -1,5 +1,15 @@
 # Math Formulas for Is This Book Good
 
+## User Threshold Formula
+
+display pass/fail based on book criteria value and user setting
+
+if (criteriaVariableName < userThresholdValue) {
+  document.getElementById("demo").innerHTML = "&#10008";
+} else {
+document.getElementById("demo").innerHTML = "&#10004";
+}
+
 ## Buyer Success Formula
 
 (review score / highest possible score * review count + 1) / ( total review count + 2)
@@ -34,11 +44,15 @@ rating of 5 out 5; 19 reviews
 
 today's date - publication date
 
+get today's date using **Date.now()** Javascript function
+
+get publication date using?? (jQuery CSS selector, find in document??)
+
 **Javascript Formula**
 
 <script>
 const releaseDate = Date.parse('March 4, 2020');
-const dateNow = Date.parse('May 8, 2020');
+const dateNow = Date.now();
 const dayInMS = 24 * 60 * 60 * 1000
 
 console.log((dateNow - releaseDate) / dayInMS);
