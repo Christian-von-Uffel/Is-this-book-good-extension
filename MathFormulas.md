@@ -40,6 +40,22 @@ rating of 5 out 5; 19 reviews
 
 95% buyer success rate
 
+**Getting Data from the page**
+
+gets the span
+
+document.querySelector("#acrCustomerReviewText").innerText
+
+<span id="acrCustomerReviewText" class="a-size-base">19 ratings</span>
+
+gets the text
+
+document.querySelector("#acrCustomerReviewText").innerText
+
+19 ratings
+
+need to replace text, convert to number, save to variable
+
 ## Days Since Release Formulas
 
 today's date - publication date
@@ -60,6 +76,39 @@ console.log((dateNow - releaseDate) / dayInMS);
 
 **Formula Example:**
 
+**Getting Data from the Page**
+
+Book Example:
+Pre-Suasion by Robert Cialdini
+https://www.amazon.com/Pre-Suasion-Revolutionary-Way-Influence-Persuade-ebook/dp/B01C36E2YS
+
+get publication date (fragile method)
+
+document.querySelector("#productDetailsTable > tbody > tr > td > div > ul > li:nth-child(4)").innerText
+
+result:
+  "Publication Date: September 6, 2016"
+
+get publication date (robust method)
+
+document.querySelector("#productDetailsTable").innerText
+
+result:
+    fetches full product details table including line breaks
+
 ## % of 1-Star Reviews Formulas
 
 if less than
+
+**Getting Data from the Page**
+
+get span showing % of 1-star reviews
+
+document.querySelector("#histogramTable > tbody > tr:nth-child(5) > td.aok-nowrap > span.a-size-base > a").title
+
+result:
+"1 stars represent 2% of rating"
+
+replace text strings not including 1-star % and save as value
+
+let m = document.querySelector("#histogramTable > tbody > tr:nth-child(5) > td.aok-nowrap > span.a-size-base > a").title.replace('1 stars represent ','').replace('% of rating','')
