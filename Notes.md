@@ -67,6 +67,8 @@ I recommend you write your CSS in a separate CSS file and then import
 
 load the page
 
+qualify if the page is for a book product 
+
 run get book data
 
 calculate scores
