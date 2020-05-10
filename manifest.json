@@ -22,8 +22,8 @@
     {
       "matches": ["*://*.amazon.com/*"],
       "exclude_matches": [
-        
-      ]
+      ],
+      "js":["js/variables.js", "js/styles.js", "js/functions.js", "js/actions.js", "js/get-book-data.js"]
     }
   ],
   "web_accessible_resources": [
