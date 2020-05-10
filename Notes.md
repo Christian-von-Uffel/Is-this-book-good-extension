@@ -115,3 +115,18 @@ document.querySelector("#wayfinding-breadcrumbs_feature_div > ul > li:nth-child(
 If this function evaluates to "Kindle Store" or "Books", or "Audible Books & Originals", we run the scripts.
 
 <div id='nav-subnav'  data-category="digital-text">
+
+## What the "return" javascript statement Does
+
+Return stops a javascript function from executing code that follows it, so it's a good idea to use if you want to qualify whether you want some code to run.
+
+ IE only try to find amazon book data, if you're on a page for amazon books, else return, duh.
+
+## How to run if statements in the javascript console
+
+simply evaluate your if statement in a parentheses after initializing with "if", close your parentheses and give the follow up action.
+
+**Example:**
+
+if( x > 10 )
+    console.log('x is greater than 10');
