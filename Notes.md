@@ -30,3 +30,88 @@ For instance, if you want to run a plugin that shows some specific information o
 You can chain javascript actions together using the "." connector.
 
 Unlike other coding languages that require you to write separate formulas for each action you want to perform, in Javascript you can simply chain actions together in simple succession.
+
+## How to Save numbers in a Text String as a numeric variable
+
+You can convert numbers stored as text into numbers in javascript using the parse integer formula.
+
+If the number you're looking to convert isn't an integer there are a number of other functions you can use.
+
+parseInt()
+
+## How to change page appearance using javascript
+
+Create a variable that will include all your css style text.
+
+Example:
+
+let style = `<style>
+
+b {
+  background: red;
+}
+
+</style>`;
+
+Then insert the contents of this variable into the header of your page's html before it ends.
+
+document.head.insertAdjacentHTML("beforeend", style);
+
+But it's not easy to spot your typos if you write CSS using Javascript.
+
+It's a lot easier to write CSS when you have autocomplete and syntax checking on the fly.
+
+I recommend you write your CSS in a separate CSS file and then import
+
+## Code process
+
+load the page
+
+run get book data
+
+calculate scores
+
+build the overlay
+
+display scores in overlay
+
+## Code tests
+
+Is book data variable an integer?
+
+Is it positive?
+
+## How to insert content into a div
+
+Ryan initialized variables div and icon as being equal to the content of two other functions, which presumably format content
+
+var div = buildNotification();
+var icon = buildIcon();
+
+It seems that honest marketer is inserting content into a div by making a variable contain the content of another variable where content is formatted together based on variables
+
+content.innerHTML = statsContent();
+
+## How to make the extension only run when the user's on an amazon book's product page
+
+We don't want the extension to run on pages that aren't for books, that would make it annoying and cause people to uninstall.
+
+The breadcrumbs navigation link seems like a pretty fragile way to verify if the page we're on is the right category because the link is different for every product.
+
+So that won't work.
+
+How about qualifying the breadbrumbs text? Does that work?
+
+**javascript selector for a hardcover book product**
+document.querySelector("#wayfinding-breadcrumbs_feature_div > ul > li:nth-child(1) > span > a")
+
+**javascript selector for a kindle book product**
+document.querySelector("#wayfinding-breadcrumbs_feature_div > ul > li:nth-child(1) > span > a")
+
+Ok, so both of these are equal so we can simply, lookup the inner text value and see if they equal the values we want before we run any additional javascript scripts.
+
+document.querySelector("#wayfinding-breadcrumbs_feature_div > ul > li:nth-child(1) > span > a").innerText
+
+If this function evaluates to "Kindle Store" or "Books", or "Audible Books & Originals", we run the scripts.
+
+<div id='nav-subnav'  data-category="digital-text">
