@@ -67,13 +67,24 @@ I recommend you write your CSS in a separate CSS file and then import
 
 load the page
 
-qualify if the page is for a book product 
+  done by the browser
 
-run get book data
+qualify if the page is for a book product
 
-calculate scores
+  check URL with manifest.json
+  check category with check-if-book.js
+
+fetch book data
+
+  get book data with get-book-data.js
+
+calculate book scores
+
+  calculate book scores with calculate-scores.js
 
 build the overlay
+
+  create overlay with create-overlay.js
 
 display scores in overlay
 
@@ -132,3 +143,55 @@ simply evaluate your if statement in a parentheses after initializing with "if",
 
 if( x > 10 )
     console.log('x is greater than 10');
+
+## How to insert HTML into a page using javascript
+
+You can easily insert HTML into pages using the pretty straight forwardly-named function insertAdjacentHTML.
+
+The way it works is you first declare which section of the html you want to insert your code into.
+
+You could insert your code into the html header using:
+
+  document.head.insertAdjacentHTML
+
+Or you could insert code in the body using:
+
+  document.body.insertAdjacentHTML
+
+You could decide where you want to put the code using the first argument of the insertAdjacentHTML function.
+
+Your options for where you want to put the code are before the code starts, after the code starts (meaning your code becomes a "child" of the first element), before the code ends, or after the code ends.
+
+You can put your code in general areas like the body or header or be way more specific and insert code into a specific element, whether it's the 5th div or the last and fit it by any criteria you like.
+
+## How to scrape hidden text that's not always in the same place
+
+Sometimes the data you want isn't always easy to find.
+
+It may be in the same place approximately, but not exactly.
+
+So you need to search data that you know it'll be part of and then clean the data or find it's exact position.
+
+That's exactly the problem I had when I was looking to fetch the publication date for books in my Is This Book Good project.
+
+The data was easy to see, but I didn't know how to index it exactly every single time.
+
+I could fetch the table containing a book's publication date.
+
+  document.querySelector("#productDetailsTable").innerText
+
+I could find the position of the date string by first searching for the position of "Publication Date: ":
+
+  document.querySelector("#productDetailsTable").innerText.search("Publication Date:")
+
+Then I could find the position the date string starts at by calculating the length of "Publication Date: "
+
+  document.querySelector("#productDetailsTable").innerText.search("Publication Date: ") + ("Publication Date: ").length
+
+I could grab the first character of the date string by :
+
+  document.querySelector("#productDetailsTable").innerText.charAt(
+    document.querySelector("#productDetailsTable").innerText.search("Publication Date: ") + ("Publication Date: ").length
+    )
+
+Could I save the next string segment to a variable if I first split it by the break element?
