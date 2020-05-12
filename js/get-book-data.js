@@ -1,7 +1,7 @@
 function getBookData() {
 
 // Get book's average review score
-let avgReviewScore = number(
+let avgReviewScore = Number(
   document.querySelector("#reviewsMedley > div > div.a-fixed-left-grid-col.a-col-left > div.a-section.a-spacing-none.a-spacing-top-mini.cr-widget-ACR > div.a-fixed-left-grid.AverageCustomerReviews.a-spacing-small > div > div.a-fixed-left-grid-col.aok-align-center.a-col-right > div > span > span").innerText
   .replace(" out of 5",""))
 
