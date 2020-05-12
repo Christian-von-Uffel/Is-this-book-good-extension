@@ -20,10 +20,17 @@
   },
   "content_scripts": [
     {
-      "matches": ["*://*.amazon.com/*"],
+      "matches": [
+        "*://*.amazon.com/*"
+      ],
       "exclude_matches": [
       ],
-      "js":["js/variables.js", "js/styles.js", "js/functions.js", "js/actions.js", "js/get-book-data.js", "js/calculate-scores.js"]
+      "js":[
+        "js/variables.js",
+        "js/check-if-book.js",
+        "js/get-book-data.js",
+        "js/calculate-scores.js",
+        "js/create-overlay.js"]
     }
   ],
   "web_accessible_resources": [
