@@ -1,5 +1,31 @@
 # Notes
 
+## Code process
+
+load the page
+
+  performed by the browser
+
+qualify if the page is for a book product
+
+  check URL with manifest.json
+  check category with check-if-book.js
+
+fetch book data
+
+  get book data with get-book-data.js
+
+calculate book scores
+
+  calculate book scores with calculate-scores.js
+
+build the overlay
+
+  create overlay styles with create-styles.js
+  create overlay with create-overlay.js
+
+display scores in overlay
+
 ## How to Create CSS Styles in Javascript
 the styles javascript file creates the overlay on the page.
 
@@ -62,31 +88,6 @@ But it's not easy to spot your typos if you write CSS using Javascript.
 It's a lot easier to write CSS when you have autocomplete and syntax checking on the fly.
 
 I recommend you write your CSS in a separate CSS file and then import
-
-## Code process
-
-load the page
-
-  done by the browser
-
-qualify if the page is for a book product
-
-  check URL with manifest.json
-  check category with check-if-book.js
-
-fetch book data
-
-  get book data with get-book-data.js
-
-calculate book scores
-
-  calculate book scores with calculate-scores.js
-
-build the overlay
-
-  create overlay with create-overlay.js
-
-display scores in overlay
 
 ## Code tests
 
@@ -192,6 +193,6 @@ I could grab the first character of the date string by :
 
   document.querySelector("#productDetailsTable").innerText.charAt(
     document.querySelector("#productDetailsTable").innerText.search("Publication Date: ") + ("Publication Date: ").length
-    )
+  )
 
 Could I save the next string segment to a variable if I first split it by the break element?
