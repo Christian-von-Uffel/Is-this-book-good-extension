@@ -71,13 +71,13 @@ Create a variable that will include all your css style text.
 
 Example:
 
-let style = `<style>
+  let style = `<style>
 
-b {
-  background: red;
-}
+  b {
+    background: red;
+  }
 
-</style>`;
+  </style>`;
 
 Then insert the contents of this variable into the header of your page's html before it ends.
 
@@ -99,8 +99,8 @@ Is it positive?
 
 Ryan initialized variables div and icon as being equal to the content of two other functions, which presumably format content
 
-var div = buildNotification();
-var icon = buildIcon();
+  var div = buildNotification();
+  var icon = buildIcon();
 
 It seems that honest marketer is inserting content into a div by making a variable contain the content of another variable where content is formatted together based on variables
 
@@ -117,18 +117,18 @@ So that won't work.
 How about qualifying the breadbrumbs text? Does that work?
 
 **javascript selector for a hardcover book product**
-document.querySelector("#wayfinding-breadcrumbs_feature_div > ul > li:nth-child(1) > span > a")
+  document.querySelector("#wayfinding-breadcrumbs_feature_div > ul > li:nth-child(1) > span > a")
 
 **javascript selector for a kindle book product**
-document.querySelector("#wayfinding-breadcrumbs_feature_div > ul > li:nth-child(1) > span > a")
+  document.querySelector("#wayfinding-breadcrumbs_feature_div > ul > li:nth-child(1) > span > a")
 
 Ok, so both of these are equal so we can simply, lookup the inner text value and see if they equal the values we want before we run any additional javascript scripts.
 
-document.querySelector("#wayfinding-breadcrumbs_feature_div > ul > li:nth-child(1) > span > a").innerText
+  document.querySelector("#wayfinding-breadcrumbs_feature_div > ul > li:nth-child(1) > span > a").innerText
 
 If this function evaluates to "Kindle Store" or "Books", or "Audible Books & Originals", we run the scripts.
 
-<div id='nav-subnav'  data-category="digital-text">
+  <div id='nav-subnav'  data-category="digital-text">
 
 ## What the "return" javascript statement Does
 
@@ -142,8 +142,8 @@ simply evaluate your if statement in a parentheses after initializing with "if",
 
 **Example:**
 
-if( x > 10 )
-    console.log('x is greater than 10');
+  if( x > 10 )
+      console.log('x is greater than 10');
 
 ## How to insert HTML into a page using javascript
 
@@ -195,4 +195,25 @@ I could grab the first character of the date string by :
     document.querySelector("#productDetailsTable").innerText.search("Publication Date: ") + ("Publication Date: ").length
   )
 
+  document.querySelector("#productDetailsTable").innerText.search("Publication Date:")
+
 Could I save the next string segment to a variable if I first split it by the break element?
+
+You can grab the next set of characters by fetching them using the substring method.
+
+Here's an example of substring where the variable res stores the first 4 characters after the initial character which is position 0.
+
+  var str = "Hello world!";
+  var res = str.substring(1, 4);
+  console.log(res)
+    ell
+
+## Aaron
+
+Here's how you might
+
+  $('#productDetailsTable')     .find('.content')     .find('ul')     .children('li')     .each(function($el){       const bEl = $el.children('b');       if(bEl.innerText == "Production Date:") {         const productionDate = bEl.siblings()[0].innerText;       }     })
+
+  always indent Formulas
+
+  lookup
