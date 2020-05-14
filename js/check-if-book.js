@@ -1,20 +1,34 @@
-function checkIfBook(){
+function checkIfBook() {
 
-// Check if the user's on a page for a amazon book product
-if (
+  // Check if the user's on a page for a book product
+  if (
 
-  document.querySelector("#wayfinding-breadcrumbs_feature_div > ul > li:nth-child(1) > span > a").innerText
+    document.querySelector("#nav-subnav > a.nav-a.nav-b > span").innerText
 
-  ==
+    ==
 
-  "Kindle Store" |  "Books" | "Audible Books & Originals"
+    "Books"
+  ) {
+    // Fetch page type
+    let pageType =
 
-)
-{
-    getBookData()
-}
-
-else {
-  return
+      document.querySelector("#wayfinding-breadcrumbs_feature_div > ul > li:nth-child(1) > span > a").innerText
+  } else {
+    return;
   }
+
+  if (
+
+    pageType
+
+    ==
+
+    "Kindle Store" || "Books" || "Audible Books & Originals")
+  // document.querySelector("#wayfinding-breadcrumbs_feature_div > ul > li:nth-child(1) > span > a").innerText
+
+) {
+  getBookData()
+} else {
+  return
+}
 }
