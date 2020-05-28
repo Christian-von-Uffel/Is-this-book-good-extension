@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Is this book good?",
   "short_name": "Is this book good",
-  "description": "Avoid making bad book purchases",
+  "description": "Avoid bad book purchases",
   "browser_action": {
      "default_icon": "images/Icon128.png"
    },
@@ -21,16 +21,18 @@
   "content_scripts": [
     {
       "matches": [
-        "*://*.amazon.com/*"
+        "*://*.amazon.com/*/dp/*",
+        "*://*.amazon.com/*gp/*"
       ],
       "exclude_matches": [
       ],
       "js":[
-        "js/variables.js",
         "js/check-if-book.js",
         "js/get-book-data.js",
         "js/calculate-scores.js",
-        "js/create-overlay.js"]
+        "js/create-styles.js",
+        "js/create-overlay.js"
+      ]
     }
   ],
   "web_accessible_resources": [
