@@ -77,9 +77,7 @@
 
   We can use this formula to check if there's a value for the percent of one-star reviews for us to grab:
 
-    ```  
-    document.querySelector("#histogramTable > tbody > tr:nth-child(5) > td.aok-nowrap > span.a-size-base > a") == null
-    ```
+    `document.querySelector("#histogramTable > tbody > tr:nth-child(5) > td.aok-nowrap > span.a-size-base > a") == null`  
 
   If the result of this formula is "TRUE", we simply set the value of oneStarPercentage equal to 0 and avoid indexing a value for it using a formula.
 
@@ -91,23 +89,17 @@
 
   Using our normal pagetype selector:
 
-    ```
-    document.querySelector("#nav-subnav > a.nav-a.nav-b > span").innerText
-    ```
+    `document.querySelector("#nav-subnav > a.nav-a.nav-b > span").innerText`
 
   Produces an error because the parent selector doesn't exist.
 
   This is the selector that seems to exist in it's place.
 
-    ```
-    document.querySelector("#wayfinding-breadcrumbs_feature_div > ul > li:nth-child(1) > span > a")
-    ```
+    `document.querySelector("#wayfinding-breadcrumbs_feature_div > ul > li:nth-child(1) > span > a")`
 
   From here we can evaluate a parent selector to see if it includes the string "Books" which is the innerText of the selector we're typically evaluating.
 
-    ```
-    document.querySelector("#wayfinding-breadcrumbs_feature_div").innerText.includes("Books")
-    ```
+    `document.querySelector("#wayfinding-breadcrumbs_feature_div").innerText.includes("Books")`
 
   This produces the result "TRUE"
 
@@ -123,9 +115,7 @@
 
   If the number you're looking to convert isn't an integer there are a number of other functions you can use.
 
-    ```
-    parseInt()
-    ```
+    `parseInt()`
 
 ## How to change page appearance using javascript
 
@@ -188,14 +178,12 @@
 
   Ryan initialized variables div and icon as being equal to the content of two other functions, which presumably format content
 
-    ```
-    var div = buildNotification();
-    var icon = buildIcon();
-    ```
+    `var div = buildNotification();
+    var icon = buildIcon();`
 
   It seems that honest marketer is inserting content into a div by making a variable contain the content of another variable where content is formatted together based on variables
 
-    content.innerHTML = statsContent();
+    `content.innerHTML = statsContent();`
 
 ## How to make the extension only run when the user's on a book's product page
 
@@ -215,17 +203,15 @@
 
   Ok, so both of these are equal so we can simply, lookup the inner text value and see if they equal the values we want before we run any additional javascript scripts.
 
-    document.querySelector("#wayfinding-breadcrumbs_feature_div > ul > li:nth-child(1) > span > a").innerText
+    `document.querySelector("#wayfinding-breadcrumbs_feature_div > ul > li:nth-child(1) > span > a").innerText`
 
   If this function evaluates to "Kindle Store" or "Books", or "Audible Books & Originals", we run the scripts.
 
-    <div id='nav-subnav'  data-category="digital-text">
+    `<div id='nav-subnav'  data-category="digital-text">`
 
   Another way to determine if the book type is an Audible book is to grab the product's product binding text using the JS path.
 
-    ```
-    document.querySelector("#productBinding").innerText
-    ```
+    `document.querySelector("#productBinding").innerText`
 
 ## What the "return" javascript statement Does
 
@@ -239,10 +225,8 @@
 
   **Example:**
 
-  ```
-    if( x > 10 )
-        console.log('x is greater than 10');
-  ```
+    `if( x > 10 )
+        console.log('x is greater than 10');`
 
 ## How to insert HTML into a page using javascript
 
@@ -252,15 +236,11 @@
 
   You could insert your code into the html header using:
 
-    ```
-    document.head.insertAdjacentHTML
-    ```
+    `document.head.insertAdjacentHTML`
 
   Or you could insert code in the body using:
 
-    ```
-    document.body.insertAdjacentHTML
-    ```
+    `document.body.insertAdjacentHTML`
 
   You could decide where you want to put the code using the first argument of the insertAdjacentHTML function.
 
@@ -282,31 +262,23 @@
 
   I could fetch the table containing a book's publication date.
 
-    ```
-    document.querySelector("#productDetailsTable").innerText
-    ```
+    `document.querySelector("#productDetailsTable").innerText`
 
   I could find the position of the date string by first searching for the position of "Publication Date: ":
 
-    ```
-    document.querySelector("#productDetailsTable").innerText.search("Publication Date:")
-    ```
+    `document.querySelector("#productDetailsTable").innerText.search("Publication Date:")`
 
   Then I could find the position the date string starts at by calculating the length of "Publication Date: "
 
-    ```
-    document.querySelector("#productDetailsTable").innerText.search("Publication Date: ") + ("Publication Date: ").length
-    ```
+    `document.querySelector("#productDetailsTable").innerText.search("Publication Date: ") + ("Publication Date: ").length`
 
   I could grab the first character of the date string with:
 
-    ```
-    document.querySelector("#productDetailsTable").innerText.charAt(
+    `document.querySelector("#productDetailsTable").innerText.charAt(
       document.querySelector("#productDetailsTable").innerText.search("Publication Date: ") + ("Publication Date: ").length
-    )
-    ```
+    )`
 
-    document.querySelector("#productDetailsTable").innerText.search("Publication Date:")
+    `document.querySelector("#productDetailsTable").innerText.search("Publication Date:")`
 
   Could I save the next string segment to a variable if I first split it by the break element?
 
@@ -314,12 +286,10 @@
 
   Here's an example of substring where the variable res stores the first 4 characters after the initial character which is position 0.
 
-    ```
-    var str = "Hello world!";
+    `var str = "Hello world!";
     var res = str.substring(1, 4);
-    console.log(res);
-    ```
-      "ell"
+    console.log(res);`
+    > "ell"
 
 ## Solving for edge cases
 
