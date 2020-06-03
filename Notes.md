@@ -61,16 +61,13 @@
 
   Here's our normal formula:
 
-    ```
     // Get book's % of 1-star reviews
     let oneStarPercentage =
       parseInt(document.querySelector("#histogramTable > tbody > tr:nth-child(5) > td.aok-nowrap > span.a-size-base > a").title.replace('1 stars represent ', '').replace('% of rating', ''))
-    ```
 
   And here's the result we get from the Javascript console when the value we're trying to select doesn't exist.
 
-    <span color="red">Uncaught TypeError: Cannot read property 'title' of null
-    at <anonymous>:2:122</span>
+  > Uncaught TypeError: Cannot read property 'title' of null at <anonymous>:2:122
 
   We can't get values that don't exist.
 
