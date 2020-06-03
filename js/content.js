@@ -81,12 +81,13 @@ var style = `<style>
           vertical-align: middle;
         }
 
-        p.book_report_content {
+        .book_report_content {
           margin: 0px 0px 0px 10px;
           display: inline-block;
           vertical-align: middle;
-          font-size: 15px;
+          font-size: 16px;
           font-style: normal;
+          line-height: 1.5em;
         }
 
     </style>`;
@@ -120,10 +121,10 @@ console.log("creating overlay");
   // add class "book_report_content" to the variable "bookReport"
   bookReport.classList.add("book_report_content");
 
-  // create the content
-  var innerHTML = '<span>Buyer Success Rate: </span>' + buyerSuccessRate + '%<br>'
-    innerHTML += '<span>Days Since Release: </span>' + daysSinceRelease + ' days<br>'
-    innerHTML += '<span>% of 1-Star Reviews: </span>' + oneStarPercentage + '%';
+  // create the book report's content
+  var innerHTML = 'Buyer Success Rate: ' + buyerSuccessRate + '%<br>'
+    innerHTML += 'Days Since Release: ' + daysSinceRelease + ' days<br>'
+    innerHTML += '% of 1-Star Reviews: ' + oneStarPercentage + '%</p>';
 
   // put the content inside the div
   bookReport.innerHTML = innerHTML;
