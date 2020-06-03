@@ -27,11 +27,7 @@
       "exclude_matches": [
       ],
       "js":[
-        "js/check-if-book.js",
-        "js/get-book-data.js",
-        "js/calculate-scores.js",
-        "js/create-styles.js",
-        "js/create-overlay.js"
+        "js/content.js"
       ]
     }
   ],
