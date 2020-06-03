@@ -209,6 +209,12 @@
 
     <div id='nav-subnav'  data-category="digital-text">
 
+  Another way to determine if the book type is an Audible book is to grab the product's product binding text using the JS path.
+
+    ```
+    document.querySelector("#productBinding").innerText
+    ```
+
 ## What the "return" javascript statement Does
 
   Return stops a javascript function from executing code that follows it, so it's a good idea to use if you want to qualify whether you want some code to run.
@@ -221,8 +227,10 @@
 
   **Example:**
 
+  ```
     if( x > 10 )
         console.log('x is greater than 10');
+  ```
 
 ## How to insert HTML into a page using javascript
 
