@@ -61,13 +61,16 @@
 
   Here's our normal formula:
 
+    ```
     // Get book's % of 1-star reviews
     let oneStarPercentage =
       parseInt(document.querySelector("#histogramTable > tbody > tr:nth-child(5) > td.aok-nowrap > span.a-size-base > a").title.replace('1 stars represent ', '').replace('% of rating', ''))
+    ```
 
   And here's the result we get from the Javascript console when the value we're trying to select doesn't exist.
 
-
+    <span color="red">Uncaught TypeError: Cannot read property 'title' of null
+    at <anonymous>:2:122</span>
 
   We can't get values that don't exist.
 
@@ -75,9 +78,11 @@
 
   If the value for the "title" element of the selector we're grabbing is "null", we know there's zero % one star reviews, there still could be zero reviews of the book in total, but we'd still have our number.
 
-  Here's the formula to check if there's a value for the percent of one-star reviews for us to grab:
+  We can use this formula to check if there's a value for the percent of one-star reviews for us to grab:
 
+    ```  
     document.querySelector("#histogramTable > tbody > tr:nth-child(5) > td.aok-nowrap > span.a-size-base > a") == null
+    ```
 
   If the result of this formula is "TRUE", we simply set the value of oneStarPercentage equal to 0 and avoid indexing a value for it using a formula.
 
@@ -89,17 +94,23 @@
 
   Using our normal pagetype selector:
 
+    ```
     document.querySelector("#nav-subnav > a.nav-a.nav-b > span").innerText
+    ```
 
   Produces an error because the parent selector doesn't exist.
 
   This is the selector that seems to exist in it's place.
 
+    ```
     document.querySelector("#wayfinding-breadcrumbs_feature_div > ul > li:nth-child(1) > span > a")
+    ```
 
   From here we can evaluate a parent selector to see if it includes the string "Books" which is the innerText of the selector we're typically evaluating.
 
+    ```
     document.querySelector("#wayfinding-breadcrumbs_feature_div").innerText.includes("Books")
+    ```
 
   This produces the result "TRUE"
 
@@ -115,7 +126,9 @@
 
   If the number you're looking to convert isn't an integer there are a number of other functions you can use.
 
+    ```
     parseInt()
+    ```
 
 ## How to change page appearance using javascript
 
@@ -178,8 +191,10 @@
 
   Ryan initialized variables div and icon as being equal to the content of two other functions, which presumably format content
 
+    ```
     var div = buildNotification();
     var icon = buildIcon();
+    ```
 
   It seems that honest marketer is inserting content into a div by making a variable contain the content of another variable where content is formatted together based on variables
 
@@ -240,11 +255,15 @@
 
   You could insert your code into the html header using:
 
+    ```
     document.head.insertAdjacentHTML
+    ```
 
   Or you could insert code in the body using:
 
+    ```
     document.body.insertAdjacentHTML
+    ```
 
   You could decide where you want to put the code using the first argument of the insertAdjacentHTML function.
 
@@ -266,21 +285,29 @@
 
   I could fetch the table containing a book's publication date.
 
+    ```
     document.querySelector("#productDetailsTable").innerText
+    ```
 
   I could find the position of the date string by first searching for the position of "Publication Date: ":
 
+    ```
     document.querySelector("#productDetailsTable").innerText.search("Publication Date:")
+    ```
 
   Then I could find the position the date string starts at by calculating the length of "Publication Date: "
 
+    ```
     document.querySelector("#productDetailsTable").innerText.search("Publication Date: ") + ("Publication Date: ").length
+    ```
 
-  I could grab the first character of the date string by :
+  I could grab the first character of the date string with:
 
+    ```
     document.querySelector("#productDetailsTable").innerText.charAt(
       document.querySelector("#productDetailsTable").innerText.search("Publication Date: ") + ("Publication Date: ").length
     )
+    ```
 
     document.querySelector("#productDetailsTable").innerText.search("Publication Date:")
 
@@ -290,21 +317,23 @@
 
   Here's an example of substring where the variable res stores the first 4 characters after the initial character which is position 0.
 
+    ```
     var str = "Hello world!";
     var res = str.substring(1, 4);
-    console.log(res)
-      ell
+    console.log(res);
+    ```
+      "ell"
 
 ## Solving for edge cases
 
-  If we try to validate what pages are for books using query selectors, these methods can easily break.
+  If we try to validate which product pages are for books using query selectors, these methods can easily break.
 
-  breadcrumbs and other pieces of amazon's website navigation vary depending on how the user gets to a given page, so creating a versatile and robust solution isn't as easy as it might appear.
+  Breadcrumbs and other pieces of amazon's website navigation vary a lot depending on how the user gets to a given page, so creating a versatile and robust solution isn't as easy as it might appear.
 
 
 ## Notes on Call w/ Aaron Smyth
 
-  Here's how you might index the text you're looking for using jQuery
+  Here's how you might index the text you're looking for using jQuery:
 
     $('#productDetailsTable')     .find('.content')     .find('ul')     .children('li')     .each(function($el){       const bEl = $el.children('b');       if(bEl.innerText == "Production Date:") {         const productionDate = bEl.siblings()[0].innerText;       }     })
 
