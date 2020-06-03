@@ -1,3 +1,6 @@
+// start the program
+console.log("Running Is this book Good?");
+
 // get book data
 console.log("getting book data");
 
@@ -43,7 +46,7 @@ if (document.querySelector("#histogramTable > tbody > tr:nth-child(5) > td.aok-n
 
 
 // calculate scores
-console.log("now calculating scores");
+console.log("calculating scores");
 
 // Calculate book's buyer success rate
 var buyerSuccessRate = Math.round((reviewCount + 1)/(reviewCount + 2) * avgReviewScore / 5 * 100);
@@ -57,7 +60,7 @@ console.log("creating styles");
 
 // create style properties
 var style = `<style>
-    	.overlay {
+    	#overlay {
           width: 320px;
           border: 0;
           top: 20px;
@@ -90,6 +93,10 @@ var style = `<style>
           line-height: 1.5em;
         }
 
+        .hidden {
+          visibility: hidden;
+        }
+
     </style>`;
 
 // insert style properties
@@ -101,7 +108,7 @@ console.log("creating overlay");
   var div = document.createElement("div");
 
   // add class of "overlay" to div
-  div.classList.add("overlay");
+  div.setAttribute("id", "overlay");
 
   // create image
   var img = document.createElement("img");
@@ -134,3 +141,11 @@ console.log("creating overlay");
 
   // add the div to the document
   document.body.append(div);
+
+  // add listener to hide the overlay on click
+  document.getElementById("overlay").addEventListener("click", hideOverlay);
+
+  // hide overlay function
+  function hideOverlay(){
+    document.getElementById("overlay").setAttribute("class", "hidden");
+  };
