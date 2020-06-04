@@ -6,9 +6,9 @@ We are too, and after repeating the same process over and over again to filter o
 
 We know it's not possible to "know" if a book is "good" before we read it, but by looking out for negative signals in review data we can help answer this fundamental question: "Is this book good?"
 
-There are 3 ways Is This Book Good tries to give users more context on how to make their book purchasing decisions.
+There are 3 ways Is This Book Good tries to give users more context on how to make book purchasing decisions.
 
-Firstly, we try to correct for a positive bias that currently exists towards books that have a high rating and a low number of reviews.
+Firstly, we try to correct for a positive bias that currently exists towards books that have high ratings and a low number of reviews.
 
 To address this, we calculate the buyer success rate, which factors in the number of reviews a book has.
 
@@ -18,7 +18,7 @@ Next, we address another source of bias in review ratings: recency.
 
 Since books are more likely to receive favorable reviews when they are new, we bring attention to how long ago the book came out.
 
-Third, and lastly, we try to address the hidden sources of book buyer frustation by bringing attention to the number, specifically the percentage of, 1-star reviews.
+Third, and lastly, we try to address the hidden sources of book buyer frustration by bringing attention to the number, specifically the percentage of, 1-star reviews.
 
 ## What to Expect as a User
 
