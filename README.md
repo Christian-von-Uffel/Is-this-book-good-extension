@@ -2,24 +2,33 @@
 
 Tired of regretting bad book purchases?
 
-We are too, and after repeating the same process over and over again to filter out potentially bad book purchases, we decided to built a tool that would do this for us instead.
+We are too, and after repeating the same process over and over again to filter out potentially bad book purchases, we decided to build a tool that would do this for us instead.
 
-We know that it's not possible to "know" if a book is "good" before we read it, but by looking out for negative signals in review data we can help answer this fundamental question: "Is this book good?"
+We know it's not possible to "know" if a book is "good" before we read it, but by looking out for negative signals in review data we can help answer this fundamental question: "Is this book good?"
 
-There are 3 ways Is This Book Good tries to give users more context on how to make their book ourchasing decisions.
+There are 3 ways Is This Book Good tries to give users more context on how to make their book purchasing decisions.
 
 Firstly, we try to correct for a positive bias that currently exists towards books that have a high rating and a low number of reviews.
 
 To address this, we calculate the buyer success rate, which factors in the number of reviews a book has.
 
-We use a simple formula for this called "Rule of Succession". You can read more about this here: https://en.wikipedia.org/wiki/Rule_of_succession
+We use a simple formula for this called "Rule of Succession". You can read more about this formula here: https://en.wikipedia.org/wiki/Rule_of_succession
 
 Next, we address another source of bias in review ratings: recency.
 
 Since books are more likely to receive favorable reviews when they are new, we bring attention to how long ago the book came out.
 
-Third, and lastly, we try to address the hidden sources of book buyer frustation by bring attention to 1-star reviews.
+Third, and lastly, we try to address the hidden sources of book buyer frustation by bringing attention to the number, specifically the percentage of, 1-star reviews.
 
+## What to Expect as a User
+
+First things first, we don't collect any of your data or send any of your data to anywhere else.
+
+Two, the Is This Book Good extension only runs on Amazon.com product pages, and nowhere else. We know a tool is only useful when it shows up at the right time.
+
+Three, our tool goes away when you need it to. Our popup disappears from your page with a single click, so you can keep browsing and shopping like you're used to.
+
+## How to Install Is this Book Good
 Is This Book Good will soon be published in the Chrome Web Store, but until then you can install it yourself without any coding experience.
 
 **How to Install the extension**
