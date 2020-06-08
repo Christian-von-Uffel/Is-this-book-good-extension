@@ -11,8 +11,7 @@
            "48": "images/Icon48.png",
           "128": "images/Icon128.png" },
   "permissions": [
-    "activeTab",
-    "tabs"
+    "activeTab"
   ],
   "background":{
     "scripts": ["js/icon.js"],
