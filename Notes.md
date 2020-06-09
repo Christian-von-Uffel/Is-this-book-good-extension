@@ -307,3 +307,13 @@
     always indent Formulas
 
     lookup
+
+## Chrome Webstore Guidelines on User Data Privacy
+
+My extension was initially rejected from the webstore because it broke Chrome's guidelines on user data privacy.
+
+Specifically, my extension declared permissions that it didn't need to run.
+
+The permissions I originally declared in my manifest file are "activeTab" and "tabs", but in order to get the extension to run correctly, I didn't need to declare any permissions at all.
+
+This information is not written about clearly in any documentation, so you may think that your Chrome Extension needs to have an "activeTab" permission to view and manipulate data on the active tab, but confusingly it does not.
