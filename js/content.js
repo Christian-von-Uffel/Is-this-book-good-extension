@@ -18,7 +18,9 @@ var reviewCount = parseInt(
 
 
 // grab the book's publication date
-if (document.querySelector("#productBinding") == null){
+if (document.querySelector("#productDetailsTable") == null && document.querySelector("#detailsReleaseDate") == null){
+  var publicationDate = "Not found"
+} else if (document.querySelector("#productBinding") == null){
 
   var publicationDate = Date.parse(
     document.querySelector("#productDetailsTable").
@@ -52,7 +54,11 @@ console.log("calculating scores");
 var buyerSuccessRate = Math.round((reviewCount + 1)/(reviewCount + 2) * avgReviewScore / 5 * 100);
 
 // Calculate days since release
-var daysSinceRelease = Math.floor((Date.now() - publicationDate) /(24 * 60 * 60 * 1000));
+if(document.querySelector("#productDetailsTable") == null && document.querySelector("#detailsReleaseDate") == null){
+  var daysSinceRelease = "NA";
+} else {
+  var daysSinceRelease = Math.floor((Date.now() - publicationDate) /(24 * 60 * 60 * 1000));
+}
 
 
 // create styles
