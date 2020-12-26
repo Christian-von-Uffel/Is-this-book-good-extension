@@ -170,31 +170,31 @@ Ok, so let's walk through an example.
 If you want to insert a div into a page you need to create the div element.
 
 ```js
-<!-- here I create a div element and save it as the variable "div" -->
+// here I create a div element and save it as the variable "div" //
   var div = document.createElement("div");
 ```
 
 You'll need to add it to the document.
 
 ```js
-<!-- Here I add the div element to the document's body -->
+// Here I add the div element to the document's body //
   document.body.append(div);
 ```
 
 And you'll need to create some content that actually goes inside of the div.
 
 ```js
-<!-- here I create a paragraph element that i'll put some text in -->
+// here I create a paragraph element that i'll put some text in //
   var para = document.createElement("p");
 
-  <!-- and here I create the text string I want to go inside the paragraph element "para" -->
+  // and here I create the text string I want to go inside the paragraph element "para" //
   var node = document.createTextNode("This is new.");
 ```
 
 You may want to create a style for this element, so you'll need to add a class name.
 
 ```js
-<!-- Here I add the class name "overlay" to the element saved as the variable "div" -->
+// Here I add the class name "overlay" to the element saved as the variable "div" //
   div.classList.add("overlay");
 ```
 
