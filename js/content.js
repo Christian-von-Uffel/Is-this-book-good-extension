@@ -18,19 +18,17 @@ var reviewCount = parseInt(
 
 
 // grab the book's publication date
-if (document.querySelector("#productDetailsTable") == null && document.querySelector("#detailsReleaseDate") == null){
-  var publicationDate = "Not found"
-} else if (document.querySelector("#productBinding") == null){
-
-  var publicationDate = Date.parse(
-    document.querySelector("#productDetailsTable").
-    innerText.match(/\w*\s\d{1,2}[,]\s\d{4}/)[0]
-  )
-
+if (document.querySelector("#productDetailsTable") != null){
+  var publicationDate = document.querySelector("#productDetailsTable").innerText.match(/\w*\s\d{1,2}[,]\s\d{4}/)[0];
+  
+} else if (document.querySelector("#detailsReleaseDate") != null){
+  var publicationDate = document.querySelector("#detailsReleaseDate").innerText;
+    
+} else if (document.querySelector("#detailBullets_feature_div") != null){  
+  var publicationDate = document.querySelector("#detailBullets_feature_div").innerText.match(/\w*\s\d{1,2}[,]\s\d{4}/)[0];
+    
 } else {
-
-  var publicationDate = Date.parse(document.querySelector("#detailsReleaseDate").innerText)
-
+  var publicationDate = "Not found"
 };
 
 
@@ -54,10 +52,10 @@ console.log("calculating scores");
 var buyerSuccessRate = Math.round((reviewCount + 1)/(reviewCount + 2) * avgReviewScore / 5 * 100);
 
 // Calculate days since release
-if(document.querySelector("#productDetailsTable") == null && document.querySelector("#detailsReleaseDate") == null){
+if(publicationDate == "Not found"){
   var daysSinceRelease = "NA";
 } else {
-  var daysSinceRelease = Math.floor((Date.now() - publicationDate) /(24 * 60 * 60 * 1000));
+  var daysSinceRelease = Math.floor((Date.now() - Date.parse(publicationDate)) /(24 * 60 * 60 * 1000));
 }
 
 
