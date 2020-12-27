@@ -6,7 +6,7 @@
   "browser_action": {
      "default_icon": "images/Icon128.png"
    },
-  "version": "0.0.1",
+  "version": "1.0",
   "icons": { "16": "images/Icon16.png",
            "48": "images/Icon48.png",
           "128": "images/Icon128.png" },
