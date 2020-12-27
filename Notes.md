@@ -200,16 +200,16 @@ You may want to create a style for this element, so you'll need to add a class n
 
 Ryan initialized variables div and icon as being equal to the content of two other functions, which presumably format content
 
-  ```js
-  var div = buildNotification();
-  var icon = buildIcon();
-  ```
+```js
+var div = buildNotification();
+var icon = buildIcon();
+```
 
 It seems that honest marketer is inserting content into a div by making a variable contain the content of another variable where content is formatted together based on variables
 
-  ```js
-  content.innerHTML = statsContent();
-  ```
+```js
+content.innerHTML = statsContent();
+```
 
 ## How to make the extension only run when the user's on a book's product page
 
@@ -371,3 +371,44 @@ Specifically, my extension declared permissions that it didn't need to run.
 The permissions I originally declared in my manifest file are "activeTab" and "tabs", but in order to get the extension to run correctly, I didn't need to declare any permissions at all.
 
 This information is not written about clearly in any documentation, so you may think that your Chrome Extension needs to have an "activeTab" permission to view and manipulate data on the active tab, but confusingly it does not.
+
+## How we can make the extension still work without publication dates
+
+When the publication date for a given book can't be found, we still want to show users a book's scores.
+
+But the system we currently use for this isn't robust. Publication dates are currently found using one of two ways. When those methods fail, the extension fails to output anything at all. That's not a good thing.
+
+Users deserve to see the book scores we were able to calculate.
+
+So let's start by describing our problem and what we want more specifically, and then we can improve how we describe it so we can make this process happen using code.
+
+If the publication date can't be found on the page, we still want the overlay to show up on the user's page, but right now we just use an if and else statement to grab the publication date. When that fails, the next step, calculating the days since release, fails too.
+
+So here we are given two ideas, one, that we don't want a single predictable error from our publication date scraping method to stop the extension's script from running and, two, that we don't want the way we calculate a book's days since release to depend on data we may not have.
+
+We can solve our publication date scraping method by changing our if and else statement to an if else if and if method that first catches the error that was stopping our script from running.
+
+```js
+if (document.querySelector("#productDetailsTable") == null && document.querySelector("#detailsReleaseDate") == null){
+  var publicationDate = "Not found"
+} else if (document.querySelector("#productBinding") == null){
+  var publicationDate = Date.parse(
+    document.querySelector("#productDetailsTable").
+    innerText.match(/\w*\s\d{1,2}[,]\s\d{4}/)[0]
+  )
+} else {
+  var publicationDate = Date.parse(document.querySelector("#detailsReleaseDate").innerText)
+};
+```
+
+We can solve our days since release calculation issue by saying the publication date's not available if the two data scraping methods fail.
+
+Here's how we can say that using javascript:
+
+We can simply evaluate whether the JS selectors we use to find the book's publication date are found on the page and if they both fail, we'll set the days since release to a string that says "NA"
+
+```js
+if(document.querySelector("#productDetailsTable") == null && document.querySelector("#detailsReleaseDate") == null){
+  var daysSinceRelease = "NA";
+}
+```
